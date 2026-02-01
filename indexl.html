@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ulang Tahun Ku! ❤️</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #fce4ec;
+            text-align: center;
+            padding: 15px;
+            margin: 0;
+            color: #c2185b;
+            overflow-x: hidden;
+        }
+
+        /* Animasi Hati Latar Belakang */
+        .bg-heart {
+            position: absolute;
+            font-size: 18px;
+            color: #e91e63;
+            opacity: 0;
+            animation: floatHeart 3s ease-in-out infinite;
+            z-index: 1;
+        }
+        @keyframes floatHeart {
+            0% { transform: translateY(0) scale(0.7); opacity: 0; }
+            50% { opacity: 1; }
+            100% { transform: translateY(-100vh) scale(1.1); opacity: 0; }
+        }
+
+        /* Container Slide */
+        .slider-wrapper {
+            max-width: 480px;
+            margin: 30px auto;
+            position: relative;
+            z-index: 10;
+        }
+        .slides-container {
+            display: flex;
+            overflow: hidden;
+            border-radius: 25px;
+            border: 3px dashed #f8bbd0;
+        }
+        .slide {
+            min-width: 100%;
+            background: white;
+            padding: 40px 25px;
+            box-sizing: border-box;
+            transition: transform 0.6s ease-in-out;
+        }
+
+        /* Animasi Hati Berdenyut */
+        .beat-heart {
+            font-size: 3em;
+            color: #e91e63;
+            animation: beat 1.2s infinite;
+            margin: 20px 0;
+        }
+        @keyframes beat {
+            0%, 100% { transform: scale(1); }
+            25% { transform: scale(1.4); }
+            40% { transform: scale(1); }
+            60% { transform: scale(1.4); }
+        }
+
+        /* Tombol Navigasi */
+        .nav-button {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: white;
+            border: none;
+            border-radius: 50%;
+            width: 45px;
+            height: 45px;
+            font-size: 1.8em;
+            color: #e91e63;
+            cursor: pointer;
+            box-shadow: 0 3px 6px rgba(0,0,0,0.2);
+        }
+        .prev-btn { left: -20px; }
+        .next-btn { right: -20px; }
+
+        /* Indikator Slide */
+        .slide-indicators {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            margin-top: 25px;
+        }
+        .indicator-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: #f8bbd0;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        .indicator-dot.active {
+            background: #e91e63;
+            transform: scale(1.2);
+        }
+
+        /* Gaya Teks */
+        h2 {
+            font-size: 1.8em;
+            line-height: 1.5;
+            margin: 0 0 15px 0;
+        }
+        p {
+            font-size: 1.2em;
+            line-height: 1.7;
+            margin: 10px 0;
+        }
+        .highlight-text {
+            font-weight: bold;
+            font-size: 1.3em;
+            color: #e91e63;
+            margin-top: 15px;
+        }
+        .music-area {
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid #f8bbd0;
+        }
+    </style>
+</head>
+<body>
+    <!-- Hati Latar Belakang -->
+    <div class="bg-heart" style="left: 8%; animation-delay: 0s;"></div>
+    <div class="bg-heart" style="left: 23%; animation-delay: 0.5s;"></div>
+    <div class="bg-heart" style="left: 38%; animation-delay: 1s;"></div>
+    <div class="bg-heart" style="left: 53%; animation-delay: 1.5s;"></div>
+    <div class="bg-heart" style="left: 68%; animation-delay: 2s;"></div>
+    <div class="bg-heart" style="left: 83%; animation-delay: 2.5s;"></div>
+
+    <!-- Container 5 Slide -->
+    <div class="slider-wrapper">
+        <div class="slides-container" id="mainSlides">
+            <!-- SLIDE 1: PEMBERITAHUAN ULANG TAHUN -->
+            <div class="slide active">
+                <h2>🎂 HALO SAYANGGG! 🥰</h2>
+                <div class="beat-heart">❤️</div>
+                <p>Hehe maaf ya kalau gak kasih tau...</p>
+                <p class="highlight-text">HARI INI AKU ULANG TAHUN LHO! 🎉</p>
+            </div>
+
+            <!-- SLIDE 2: PESAN UTAMA -->
+            <div class="slide">
+                <h2>✨ HARI SPESIAL INI ✨</h2>
+                <div class="beat-heart">❤️</div>
+                <p>Di hari ulang tahun ku yang ke sekian ini,</p>
+                <p>Aku cuma punya satu harapan besar...</p>
+                <p class="highlight-text">KITA BISA TETEP KAYAK GINI YA SAYANG! 🤗</p>
+            </div>
+
+            <!-- SLIDE 3: PESAN CINTA -->
+            <div class="slide">
+                <h2>❤️ AKU SAYANG KAMU ❤️</h2>
+                <div class="beat-heart">❤️</div>
+                <p>Kamu selalu jadi tempat yang nyaman buatku,</p>
+                <p>Yang selalu ada buat aku saat senang atau sedih...</p>
+                <p class="highlight-text">I LOVE YOU SELALU DAN SELAMANYA! 🥰</p>
+            </div>
+
+            <!-- SLIDE 4: LAGU KHUSUS 1 -->
+            <div class="slide">
+                <h2>🎵 LAGU UNTUK KAMU 🎵</h2>
+                <div class="beat-heart">❤️</div>
+                <p><b>Aku Ingin Jadi Teman Nyamanmu</b></p>
+                <div class="music-area">
+                    <iframe src="https://open.spotify.com/embed/track/3Z9X7T9w4974R4t0t0X7x7?utm_source=generator" width="100%" height="80" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+                    <p>Dengarkan di <a href="https://www.youtube.com/watch?v=5fQ7b4Zx9X0" target="_blank" rel="noopener noreferrer">YouTube</a></p>
+                </div>
+            </div>
+
+            <!-- SLIDE 5: LAGU KHUSUS 2 -->
+            <div class="slide">
+                <h2>🎵 LAGU KHUSUS KEDUA 🎵</h2>
+                <div class="beat-heart">❤️</div>
+                <p><b>bergema sampai selamanya - Nadhif Basalamah</b></p>
+                <div class="music-area">
+                    <iframe src="https://open.spotify.com/embed/track/1RaJdXCj61oSRUUciGKoWe?utm_source=generator" width="100%" height="80" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+                    <p>Dengarkan di <a href="https://open.spotify.com/track/1RaJdXCj61oSRUUciGKoWe?si=_pi3X1VgQmOLgSQM6DjT3Q" target="_blank" rel="noopener noreferrer">Spotify</a></p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tombol Navigasi -->
+        <button class="nav-button prev-btn" onclick="changeSlide(-1)">←</button>
+        <button class="nav-button next-btn" onclick="changeSlide(1)">→</button>
+
+        <!-- Indikator Slide -->
+        <div class="slide-indicators">
+            <span class="indicator-dot active" onclick="goToSlide(1)"></span>
+            <span class="indicator-dot" onclick="goToSlide(2)"></span>
+            <span class="indicator-dot" onclick="goToSlide(3)"></span>
+            <span class="indicator-dot" onclick="goToSlide(4)"></span>
+            <span class="indicator-dot" onclick="goToSlide(5)"></span>
+        </div>
+    </div>
+
+    <script>
+        // Isi hati latar belakang dengan emoji ❤️
+        document.querySelectorAll('.bg-heart').forEach(el => el.textContent = '❤️');
+
+        // Script Kontrol Slide
+        let currentSlide = 1;
+        showActiveSlide(currentSlide);
+
+        // Ganti slide maju/mundur
+        function changeSlide(n) {
+            showActiveSlide(currentSlide += n);
+        }
+
+        // Pindah ke slide tertentu
+        function goToSlide(n) {
+            showActiveSlide(currentSlide = n);
+        }
+
+        // Tampilkan slide yang aktif
+        function showActiveSlide(n) {
+            const slides = document.getElementsByClassName('slide');
+            const dots = document.getElementsByClassName('indicator-dot');
+
+            // Loop jika melebihi jumlah slide
+            if (n > slides.length) currentSlide = 1;
+            if (n < 1) currentSlide = slides.length;
+
+            // Geser slide
+            document.getElementById('mainSlides').style.transform = `translateX(-${(currentSlide - 1) * 100}%)`;
+
+            // Update indikator
+            for (let i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(' active', '');
+            }
+            dots[currentSlide - 1].className += ' active';
+        }
+
+        // Auto-slide setiap 6 detik
+        setInterval(() => changeSlide(1), 6000);
+    </script>
+</body>
+</html>
